@@ -1,33 +1,61 @@
-'use client'
+"use client"
 
-import { useEffect, useState } from 'react'
-import { FiMoon , FiSun  } from "react-icons/fi";
+import * as React from "react"
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+import {cn} from "@/lib/utils"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
-export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false)
-
-  useEffect(() => {
-    const stored = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const shouldUseDark = stored === 'dark' || (!stored && prefersDark)
-    
-    setIsDark(shouldUseDark)
-    document.documentElement.classList.toggle('dark', shouldUseDark)
-  }, [])
-
-  const toggleTheme = () => {
-    const newDark = !isDark
-    setIsDark(newDark)
-    document.documentElement.classList.toggle('dark', newDark)
-    localStorage.setItem('theme', newDark ? 'dark' : 'light')
-  }
+export function ModeToggle() {
+  const { setTheme } = useTheme()
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-300 dark:bg-gray-700"
-    >
-      {isDark ? <FiMoon className="w-5 h-5 text-white" /> : <FiSun className="w-5 h-5 text-black" />}
-    </button>
+    <DropdownMenu>
+      <DropdownMenuTrigger className={cn("inline-flex \
+      text-white \
+      items-center \
+      justify-center \
+      whitespace-nowrap \
+      rounded-md \
+      text-sm \
+      font-medium \
+      ring-offset-background \
+      transition-colors \
+      hover:bg-secondary \
+      hover:text-black \
+      focus-visible:outline-none \
+      focus-visible:ring-2 \
+      focus-visible:ring-ring \
+      focus-visible:ring-offset-2 \
+      disabled:pointer-events-none \
+      bg-trasnparent \
+      hover:bg-primary \
+      dark:hover:text-white \
+      dark:hover:bg-muted \
+      h-10 \
+      w-10")}>
+          <Sun className="text-2xl scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+          <Moon className="absolute text-2xl scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+          <span className="sr-only">Toggle theme</span>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem onClick={() => setTheme("light")}>
+          Light
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          Dark
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("system")}>
+          System
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }
+
+export default ModeToggle;

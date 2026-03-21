@@ -2,16 +2,15 @@ import Image from "next/image";
 import coffeMorningBanner from "../../public/images/Home_images/coffee_morning.jpg";
 
 
-const Banner = () => {
+const productBanner = () => {
   return (
-    <section className="relative w-full h-[90vh] min-h-[600px]">
+    <section className="relative w-full min-h-[300px]">
       {/* Background image entirely clear*/}
       <Image
         src={coffeMorningBanner}
         alt="Café Don Valerio banner"
         fill
         priority
-     
         sizes="100vw"
         className="object-cover "
       />
@@ -28,7 +27,7 @@ const Banner = () => {
         * text-left; aligns text to the left
         * text-white; sets text color to white for contrast against the background
       */}
-    <div className="absolute inset-0 flex items-center">
+    <div className="absolute flex items-center  inset-0">
      <div className="max-w-4xl px-6 md:px-12 text-left text-white">
      
      {/*
@@ -41,20 +40,13 @@ const Banner = () => {
                     text-5xl 
                     md:text-8xl
                     lg:text-8xl">
-        CAFÉ <br /> DON <br /> VALERIO
-      </h1>
+        Café Blend
+      </h1>  
 
- 
-        <p className="mt-6 font-body md:font-body lg:text-lg text-white-90 
-                     md:max-w-100 lg:max-w-4xl">
-          Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto d
-          e relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la impren
-        </p>
-    
     </div>
       </div>
     </section>
   );
 };
 
-export default Banner;
+export default productBanner;

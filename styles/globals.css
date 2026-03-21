@@ -1,13 +1,11 @@
-@import "tailwindcss";  /* Tailwind CSS import */
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));  /* Tailwind CSS import */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 
 /* Define variables to Tailwind generate utilities */
 /*
@@ -27,33 +25,176 @@
 └─────────────────────────────────────────────────────┘ 
 */
 @theme inline {
+  /* Color tokens for Tailwind CSS */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-natural: var(--natural);
+  --color-natural-foreground: var(--natural-foreground);
+  --color-complementary: var(--complementary);
+  --color-complementary-foreground: var(--complementary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-border-darker: var(--border-darker);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  /* Font tokens */
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
-
- /** Custom font variables, arguments come from app/layout.tsx */
   --font-body: var(--font-body);
   --font-title: var(--font-title);
   --font-navbar: var(--font-navbar);
-
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: white;
-    --foreground: #ededed;
-  }
 }
 
 body {
-  background: var(--background);
   background-image: url('/images/backgrounds/texture-pattern-opacity48.png');
   background-repeat: repeat;
   background-position: -5% -5%;
   background-size: auto;
- 
-  color: var(--foreground);
-  font-family: var(--font-body) ;
+  font-family: var(--font-body);
+
   font-size: 16px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  :root {
+
+    /*
+      GENERAL COLOR PALETTE (for both light and dark modes, with adjustments for dark mode):
+      a. #FFFFFF; White
+      b. #FDBB11; Golden yellow for primary buttons and highlights
+      c. #F9A33A; Orange for secondary actions and accents
+      d. #89b16f; Green for complementary elements and highlights
+      e. #1F5476; Dark blue for primary text and key elements
+      f. #087e8c; Teal/Cyan for accents and decorative elements
+      g. #916326; Brown for natural/coffee-themed elements
+
+    */
+    /* ═══════════════════════════════════════════════════════════ */
+    /* LIGHT MODE - Brand Color Palette */
+    /* ═══════════════════════════════════════════════════════════ */
+    
+    /* Core Background & Text */
+    --background: #FFFFFF; /* Main background - Brand Color (a) */
+    --foreground: #000000; /* Primary text color - Brand Color (e) */
+    
+    /* Primary Action Color (Buttons, Links, CTAs) */
+    --primary: #FDBB11; /* Golden Yellow - Brand Color (b) */
+    --primary-foreground: #000000; /* Text on primary button */
+    
+    /* Secondary Action Color (Alternative buttons) */
+    --secondary: #F9A33A; /* Orange - Brand Color (c) */
+    --secondary-foreground: #1F5476; /* Text on secondary button */
+    
+    /* Accent Color (Highlights, decorative elements) */
+    --accent: #087e8c; /* Teal/Cyan - Brand Color (f) */
+    --accent-foreground: #FFFFFF; /* Text on accent */
+    
+    /* Natural/Tertiary Color (Coffee-themed elements) */
+    --natural: #916326; /* Brown - Brand Color (g) */
+    --natural-foreground: #FFFFFF; /* Text on natural color */
+    
+    /* Complementary Color */
+    --complementary: #89b16f; /* Green - Brand Color (d) */
+    --complementary-foreground: #1F5476; /* Text on complementary */
+    
+    /* Card & Surface */
+    --card: #F9FAFB; /* Slightly off-white for cards */
+    --card-foreground: #1F5476; /* Text on cards */
+    
+    /* Border & Dividers */
+    --border: rgba(31, 84, 118, 0.12); /* Subtle border using primary text */
+    --border-darker: rgba(31, 84, 118, 0.25); /* Stronger borders */
+    
+    /* Muted/Disabled States */
+    --muted: #E5E7EB; /* Light gray for disabled elements */
+    --muted-foreground: #9CA3AF; /* Gray text for muted */
+    
+    /* Error/Destructive State (uncomment when needed) */
+    /* --destructive: #DC2626; */
+    /* --destructive-foreground: #FFFFFF; */
+    
+    /* Success State (uncomment when needed) */
+    /* --success: #10B981; */
+    /* --success-foreground: #FFFFFF; */
+    
+    /* Warning State (uncomment when needed) */
+    /* --warning: #F59E0B; */
+    /* --warning-foreground: #FFFFFF; */
+    
+    /* Info State (uncomment when needed) */
+    /* --info: #3B82F6; */
+    /* --info-foreground: #FFFFFF; */
+  }
+
+  .dark {
+    /* ═══════════════════════════════════════════════════════════ */
+    /* DARK MODE - Brand Color Palette (Adjusted) */
+    /* ═══════════════════════════════════════════════════════════ */
+    
+    /* Core Background & Text */
+    --background: #0F1419; /* Dark background */
+    --foreground: #F5F5F5; /* Light text for dark background */
+    
+    /* Primary Action Color (Buttons, Links) */
+    --primary: #FDD570; /* Lighter golden yellow for dark mode */
+    --primary-foreground: #000000; /* Dark text on bright button */
+    
+    /* Secondary Action Color */
+    --secondary: #F9A33A; /* Orange - works well in dark mode */
+    --secondary-foreground: #1F5476; /* Dark text on bright button */
+    
+    /* Accent Color */
+    --accent: #13B9D1; /* Brighter teal for dark mode */
+    --accent-foreground: #0F1419; /* Dark text on bright accent */
+    
+    /* Natural/Tertiary Color */
+    --natural: #A9754A; /* Lighter brown for dark mode */
+    --natural-foreground: #F5F5F5; /* Light text on natural */
+    
+    /* Complementary Color */
+    --complementary: #9CCB6D; /* Lighter green for dark mode */
+    --complementary-foreground: #0F1419; /* Dark text on bright complementary */
+    
+    /* Card & Surface */
+    --card: #1A1F26; /* Slightly lighter than background for cards */
+    --card-foreground: #F5F5F5; /* Light text on cards */
+    
+    /* Border & Dividers */
+    --border: rgba(245, 245, 245, 0.12); /* Subtle border */
+    --border-darker: rgba(245, 245, 245, 0.25); /* Stronger borders */
+    
+    /* Muted/Disabled States */
+    --muted: #374151; /* Darker gray for disabled elements */
+    --muted-foreground: #9CA3AF; /* Gray text for muted */
+    
+    /* Error/Destructive State (uncomment when needed) */
+    /* --destructive: #EF4444; */
+    /* --destructive-foreground: #FFFFFF; */
+    
+    /* Success State (uncomment when needed) */
+    /* --success: #34D399; */
+    /* --success-foreground: #1F5476; */
+    
+    /* Warning State (uncomment when needed) */
+    /* --warning: #FBBF24; */
+    /* --warning-foreground: #1F5476; */
+    
+    /* Info State (uncomment when needed) */
+    /* --info: #60A5FA; */
+    /* --info-foreground: #1F5476; */
+  }
 }

@@ -43,9 +43,9 @@ const { ScrollContainerCarrousel } = models;
 
 export default function CoffeeCarousel() {
   return (
-    <section className="py-16 bg-neutral-100">
+    <section id="NuestrosCafes" className="py-16">
       <div className="px-6 md:px-16">
-        <h2 className="text-4xl md:text-5xl font-normal font-title mb-16 text-black">
+        <h2 className="text-4xl md:text-5xl font-body  mb-16">
           Nuestros cafés
         </h2>
         <ScrollContainerCarrousel coffees={coffees} />

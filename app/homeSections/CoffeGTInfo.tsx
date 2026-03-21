@@ -18,21 +18,21 @@ const CoffeGTinfo = () => {
         </div>
 
         {/* ========= 2nd col ========= */}
-        <div className="w-full md:w-1/2 p-6">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-normal text-black pb-6">
+        <div className="w-full md:w-1/2 p-6 text-foreground">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-body pb-6">
             ¿Qué hacen que el café guatemalteco sea único?
           </h2>
-          <p className="text-base lg:text-xl text-black">
+          <p className="font-body lg:text-xl">
             Descubre el sabor auténtico de Guatemala con nuestro café de alta
             calidad, cultivado en las mejores regiones del país y tostado con
             pasión para ofrecerte una experiencia única en cada taza.
           </p>
-          <p className="text-base lg:text-xl text-black">
+          <p className="font-body lg:text-xl">
             Descubre el sabor auténtico de Guatemala con nuestro café de alta
             calidad, cultivado en las mejores regiones del país y tostado con
             pasión para ofrecerte una experiencia única en cada taza.
           </p>
-          <p className="text-base lg:text-xl text-black">
+          <p className="font-body lg:text-xl ">
             Descubre el sabor auténtico de Guatemala con nuestro café de alta
             calidad, cultivado en las mejores regiones del país y tostado con
             pasión para ofrecerte una experiencia única en cada taza.

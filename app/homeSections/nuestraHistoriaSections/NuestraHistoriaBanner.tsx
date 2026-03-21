@@ -22,7 +22,7 @@ const NuestraHistoriaBanner = () => {
         flex items-center justify-center
         text-white
         text-4xl md:text-6xl
-        font-normal
+        font-body
         text-center
         pointer-events-none
       ">

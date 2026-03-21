@@ -2,7 +2,7 @@ import Banner from "./homeSections/Banner";
 import models from "../components/indexComponents"
 
 import SectionDivider from "../components/others/sectionDivider"
-import CoffeeCarousel from "./homeSections/CoffeeCarrousel"
+import CoffeeCarousel from "./homeSections/NuestrosCafes"
 import CoffeGTInfo from "./homeSections/CoffeGTInfo"
 import NuestraHistoria from "./homeSections/NuestraHistoria"
 
@@ -11,7 +11,8 @@ const { Footer } = models;
 export default function Page() {
   return (
     <div>
-     <Banner />
+
+    <Banner />
       
     {/* GUIPIL DIVIDER */}
     <SectionDivider />
@@ -32,7 +33,7 @@ export default function Page() {
     <NuestraHistoria />
 
     {/*Footer */}
-    <Footer />
+     
 
     </div>
    

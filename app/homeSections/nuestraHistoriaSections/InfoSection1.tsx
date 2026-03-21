@@ -11,7 +11,7 @@ const InfoSection1 = () => {
           <ModernBoxWithImage
             title="¿Qué hacen que el café guatemalteco sea único?"
             image="/images/Home_images/antigua_Guatemala.jpg"
-            backgroundBoxColor="bg-white"
+            backgroundBoxColor="bg-transparent"
           />
         </div>
 
@@ -23,11 +23,11 @@ const InfoSection1 = () => {
               title="¿Qué hacen que el café guatemalteco sea único?"
               image="/images/Home_images/Lake_Atitlan_in_Guatemala.png"
               unoptimized
-              backgroundBoxColor="bg-white"
+              backgroundBoxColor="bg-transparent"
             />
           </div>
           {/* --------- Text --------- */}
-          <div className="flex min-h-48 text-base lg:text-xl justify-center items-center text-black p-6">
+          <div className="flex min-h-48 font-body text-foreground lg:text-xl justify-center items-center p-6">
             <p>o lacinia, mattis sapien a, sollicitudin nisi.
                Maecenas maximus, urna a fermentum egestas, augue leo semper ex, ut gravida enim odio at ipsum. Morbi vel tincidunt nisl.vitae massa. Vestibulum ut eleifend quam.
                 sum ha sido el texto de relleno estándar de las industrias desde el </p>
