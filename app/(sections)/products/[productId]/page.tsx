@@ -17,17 +17,7 @@ async function ProductDetails({
     params: Promise<{productId: string}>
   }
 ){
-  const productId = (await params).productId; // { productId: 'X' }
-  
-  const cafeSpecs = [
-    { label: "Tueste", value: "Medio" },
-    { label: "Altura", value: "20 cm" },
-    { label: "Color", value: "blanco" },
-    { label: "Tipo", value: "Molido" },
-    { label: "Peso", value: "60 lb" },
-    { label: "Variedad", value: "" },
-    { label: "Lugar de Origen", value: "" }
-  ];
+  const productId = (await params).productId;
   
   return(
    <div>
@@ -36,11 +26,9 @@ async function ProductDetails({
     {/* GUIPIL DIVIDER */}
     <SectionDivider />
     
-  
+    
       <CardSection 
-        title="Café Especial Don Valerio"
-        image="/images/Home_images/CoffesCarrousel/coffee1.png" // Cambia esto por tu imagen real
-        specs={cafeSpecs}
+      coffee_ID={productId}
       />
 
   

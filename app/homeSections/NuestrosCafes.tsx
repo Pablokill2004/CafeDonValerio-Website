@@ -1,54 +1,18 @@
 import models from "../../components/indexComponents"
+import  Coffees  from "../api/coffees.json";
+// 1. Importing the list of coffees from app\api\coffees.json
 
-const coffees = [
-  {
-    id: 1,
-    name: "Cafe Negro",
-    weight: "Peso 60 lb",
-    img: "/images/Home_images/CoffesCarrousel/coffee1.png",
-  },
-  {
-    id: 2,
-    name: "Cafe Negro",
-    weight: "Peso 60 lb",
-    img: "/images/Home_images/CoffesCarrousel/coffee2.png",
-  },
-  {
-    id: 3,
-    name: "Cafe Negro",
-    weight: "Peso 60 lb",
-    img: "/images/Home_images/CoffesCarrousel/coffee1.png",
-  },
-  {
-    id: 4,
-    name: "Cafe Negro",
-    weight: "Peso 60 lb",
-    img: "/images/Home_images/CoffesCarrousel/coffee1.png",
-  },
-  {
-    id: 5,
-    name: "Cafe Negro",
-    weight: "Peso 60 lb",
-    img: "/images/Home_images/CoffesCarrousel/coffee1.png",
-  },
-  {
-    id: 6,
-    name: "Cafe Negro",
-    weight: "Peso 60 lb",
-    img: "/images/Home_images/CoffesCarrousel/coffee1.png",
-  },
-]
 
 const { ScrollContainerCarrousel } = models;
 
 export default function CoffeeCarousel() {
   return (
-    <section id="NuestrosCafes" className="py-16">
+    <section id="OurCoffees" className="py-16">
       <div className="px-6 md:px-16">
         <h2 className="text-4xl md:text-5xl font-body  mb-16">
           Nuestros cafés
         </h2>
-        <ScrollContainerCarrousel coffees={coffees} />
+        <ScrollContainerCarrousel coffees={Coffees} />
       </div>
     </section>
   )

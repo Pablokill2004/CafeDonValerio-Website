@@ -1,7 +1,7 @@
 import Banner from "./homeSections/Banner";
-import models from "../components/indexComponents"
+import models from "@/components/indexComponents"
 
-import SectionDivider from "../components/others/sectionDivider"
+import SectionDivider from "@/components/others/sectionDivider"
 import CoffeeCarousel from "./homeSections/NuestrosCafes"
 import CoffeGTInfo from "./homeSections/CoffeGTInfo"
 import NuestraHistoria from "./homeSections/NuestraHistoria"

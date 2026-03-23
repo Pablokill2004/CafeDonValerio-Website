@@ -5,6 +5,8 @@ import { FiUser, FiMenu, FiX } from "react-icons/fi";
 import ThemeToggle from "../../components/others/ThemeToggle";
 import Link from "next/link";
 
+// Shared text styles for all navigation links
+const commonNavStyles = "font-navbar uppercase tracking-[0.2em] text-sm text-natural-foreground";
 
 //  NavItem component for navigation links with hover effect
 const NavItem = ({ label,href }: { label: string; href: string }) => {
@@ -28,11 +30,11 @@ const NavItem = ({ label,href }: { label: string; href: string }) => {
    };
 
    return (
-    <div className="font-navbar cursor-pointer uppercase relative overflow-hidden group">
-      <Link href={href} onClick={handleClick} className="text-natural-foreground block tracking-widest text-sm transition-transform duration-300 group-hover:translate-y-full">
+    <div className="cursor-pointer relative overflow-hidden group">
+      <Link href={href} onClick={handleClick} className={`${commonNavStyles} block transition-transform duration-300 group-hover:translate-y-full`}>
         {label}
       </Link>
-      <Link href={href} onClick={handleClick} className="text-natural-foreground absolute inset-0 tracking-widest text-sm -translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+      <Link href={href} onClick={handleClick} className={`${commonNavStyles} absolute inset-0 -translate-y-full transition-transform duration-300 group-hover:translate-y-0`}>
         {label}
       </Link>
     </div>
@@ -56,7 +58,7 @@ const MobileNavItem = ({ label, href, onClick }: { label: string; href: string; 
   return (
     <Link
       href={href}
-      className="font-navbar uppercase tracking-widest text-sm text-natural-foreground hover:text-white transition-colors block py-2"
+      className={`${commonNavStyles} hover:text-white transition-colors block py-2`}
       onClick={handleClick}
     >
       {label}
@@ -89,9 +91,9 @@ const Navbar = () => {
  // Object mapping navigation labels to their respective paths
   const navLinks: { [key: string]: string }= {
     "Inicio": "/",
-    "Historia": "/history",
-    "Nosotros": "#Footer",
-    "Productos": "#NuestrosCafes",
+    "Historia": "#OurHistory",
+    "Nosotros": "/about-us",
+    "Productos": "/#OurCoffees",
     "Contactos": "#Footer",
   };
 

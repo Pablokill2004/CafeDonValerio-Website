@@ -1,0 +1,74 @@
+[
+  {
+    "coffee_id": 1,
+    "name": "Cafe Negro",
+    "weight": "Peso 6023 lb",
+    "img": "/images/Home_images/CoffesCarrousel/coffee1.png",
+    "Tueste": "Medio",
+    "Altura": "20 cm",
+    "Color": "negro",
+    "Tipo": "Grano",
+    "Variedad": "Arábica",
+    "Lugar de Origen": "Colombia"
+  },
+  {
+    "coffee_id": 2,
+    "name": "Cafe DE PEPE",
+    "weight": "Peso 80 lb",
+    "img": "/images/Home_images/CoffesCarrousel/coffee2.png",
+    "Tueste": "Oscuro",
+    "Altura": "15 cm",
+    "Color": "marrón",
+    "Tipo": "Molido",
+    "Variedad": "Robusta",
+    "Lugar de Origen": "Brasil"
+  },
+  {
+    "coffee_id": 3,
+    "name": "Cafe blend",
+    "weight": "Peso 75 lb",
+    "img": "/images/Home_images/CoffesCarrousel/coffee1.png",
+    "Tueste": "Claro",
+    "Altura": "25 cm",
+    "Color": "beige",
+    "Tipo": "Cápsula",
+    "Variedad": "Mezcla",
+    "Lugar de Origen": "Etiopía"
+  },
+  {
+    "coffee_id": 4,
+    "name": "Cafe jijija",
+    "weight": "Peso 70 lb",
+    "img": "/images/Home_images/CoffesCarrousel/coffee1.png",
+    "Tueste": "Medio",
+    "Altura": "18 cm",
+    "Color": "caramelo",
+    "Tipo": "Grano",
+    "Variedad": "Geisha",
+    "Lugar de Origen": "Panamá"
+  },
+  {
+    "coffee_id": 5,
+    "name": "Cafe ad populum",
+    "weight": "Peso 10 lb",
+    "img": "/images/Home_images/CoffesCarrousel/coffee1.png",
+    "Tueste": "Oscuro",
+    "Altura": "22 cm",
+    "Color": "chocolate",
+    "Tipo": "Molido",
+    "Variedad": "Caturra",
+    "Lugar de Origen": "Costa Rica"
+  },
+  {
+    "coffee_id": 6,
+    "name": "Cafe Negro",
+    "weight": "Peso 30 lb",
+    "img": "/images/Home_images/CoffesCarrousel/coffee2.png",
+    "Tueste": "Claro",
+    "Altura": "30 cm",
+    "Color": "ámbar",
+    "Tipo": "Cápsula",
+    "Variedad": "Bourbon",
+    "Lugar de Origen": "Guatemala"
+  }
+]

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 interface Coffee {
-  id: string | number
+  coffee_id: string | number
   img: string
   name: string
   weight: string
@@ -17,7 +17,7 @@ export default function ScrollContainerCarrousel({ coffees }: { coffees: Coffee[
       {coffees.map((coffee) => (
         /* Coffee Card */
         <div
-          key={coffee.id}
+          key={coffee.coffee_id}
           className="bg-card min-w-80 md:min-w-96 shadow-md snap-start p-12 flex flex-col overflow-hidden"
         >
           <div className="relative aspect-square w-full">
@@ -33,8 +33,8 @@ export default function ScrollContainerCarrousel({ coffees }: { coffees: Coffee[
           <h3 id="NuestroCafes" className="mt-4 text-xl font-medium">{coffee.name}</h3>
           <p className="font-body">{coffee.weight}</p>
           
-          <button  onClick={() => router.push(`/products/${encodeURIComponent(coffee.id)}`)}
-          className="transition-colors duration-200 bg-primary hover:bg-secondary mt-8 mx-auto px-6 py-2 rounded-full w-fit">
+          <button  onClick={() => router.push(`/products/${encodeURIComponent(coffee.coffee_id)}`)}
+          className="transition-colors duration-200 cursor-pointer bg-primary hover:bg-secondary mt-8 mx-auto px-6 py-2 rounded-full w-fit">
               <p className="text-sm font-medium text-primary-foreground">
               Ver más
               </p>

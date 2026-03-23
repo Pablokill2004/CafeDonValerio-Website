@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import FooterLogo from "../../public/logos/Footer_Logos/CDV_Footer_Logo.jpeg";
 import WhatsAppIcon from "../../public/logos/Footer_Logos/whatsapp.png";
 import FacebookIcon from "../../public/logos/Footer_Logos/facebook.png";
@@ -7,7 +8,15 @@ import InstagramIcon from "../../public/logos/Footer_Logos/instagram.png";
 const Footer = () => {
 
 	// Array para mapear los links y evitar repetir código
-  const navLinks = ['Inicio', 'Historia', 'Nosotros', 'Productos'];
+  // Object mapping navigation labels to their respective paths
+  const navLinks: { [key: string]: string }= {
+      "Inicio": "/",
+    "Historia": "#OurHistory",
+    "Nosotros": "/about-us",
+    "Productos": "/#OurCoffees",
+    "Contactos": "#Footer",
+  
+  };
 
 return (
     <footer id="Footer" className="py-10 bg-natural dark:text-gray-900 font-navbar tracking-widest uppercase text-natural-foreground">
@@ -34,14 +43,14 @@ return (
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <p className="mb-6 text-lg">Café Don Valerio</p>
             <ul className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <li key={link}>
-                  <a 
-                    href="#" 
+              {Object.entries(navLinks).map(([label, href]) => (
+                <li key={label}>
+                  <Link 
+                    href={href} 
                     className="transition-colors hover:text-yellow-200 dark:hover:text-yellow-200"
                   >
-                    {link}
-                  </a>
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>

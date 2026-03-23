@@ -9,12 +9,15 @@ import ScrollContainerCarrousel  from './homeComponents/ScrollContainer_Carrouse
 import ModernBoxWithImage from './homeComponents/ModernBoxWithImage';
 import Footer from './others/Footer';
 import SectionDivider from './others/sectionDivider';
+import TitleDivider from './others/titleDivider';
+
 
 const IndexComponents = {
   ScrollContainerCarrousel,
   ModernBoxWithImage,
   Footer,
-  SectionDivider
+  SectionDivider,
+  TitleDivider
 };
 
 export default IndexComponents;

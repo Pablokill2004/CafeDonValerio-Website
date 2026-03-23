@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const NuestraHistoriaBanner = () => {
   return (
-    <div className="relative flex flex-row h-32 md:h-64 lg:h-80">
+    <div id="OurHistory" className="relative flex flex-row h-32 md:h-64 lg:h-80">
 
       {/* Imagen izquierda */}
       <div className="relative flex-1">
