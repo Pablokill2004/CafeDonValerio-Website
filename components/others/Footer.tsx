@@ -17,6 +17,9 @@ const Footer = () => {
     "Contactos": "#Footer",
   
   };
+  const numero = "50212345678"; // Cambia por tu número
+  const mensaje = "Hola, me gustaría más información."; // Mensaje opcional
+
 
 return (
     <footer id="Footer" className="py-10 bg-natural dark:text-gray-900 font-navbar tracking-widest uppercase text-natural-foreground">
@@ -61,21 +64,15 @@ return (
             <p className="mb-6 text-lg">Contactos</p>
             <div className="flex flex-col gap-6">
               
-              {/* Contacto 1 */}
-              <div className="flex flex-col gap-1">
-                <div className="flex items-center justify-center gap-2 md:justify-start">
-                  <a href="#" className="hover:underline">+502 4555 5555</a>
-                  <div className="relative w-5 h-5">
-                    <Image src={WhatsAppIcon} alt="WhatsApp" fill className="object-cover" />
-                  </div>
-                </div>
-                <span className="text-sm">Carlos Siquinajay</span>
-              </div>
+             
 
               {/* Contacto 2 */}
               <div className="flex flex-col gap-1">
                 <div className="flex items-center justify-center gap-2 md:justify-start">
-                  <a href="#" className="hover:underline">+502 4555 5555</a>
+                  <a  href={`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline">+502 4555 5555</a>
                   <div className="relative w-5 h-5">
                     <Image src={WhatsAppIcon} alt="WhatsApp" fill className="object-cover" />
                   </div>

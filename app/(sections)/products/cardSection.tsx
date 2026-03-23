@@ -33,6 +33,7 @@ async function getCoffeeSpecs(coffeeID: string | number) {
   }
 }
 
+
 export default async function ProductCard({ coffee_ID }: { coffee_ID: string | number }) {
   // 2. Llamamos a nuestra nueva función
   const CoffeeSpecs = await getCoffeeSpecs(coffee_ID);
@@ -47,7 +48,7 @@ export default async function ProductCard({ coffee_ID }: { coffee_ID: string | n
   }
 
   // Filtramos las propiedades que NO queremos en la lista
-  const keysToExclude = ['id', 'name', 'img'];
+  const keysToExclude = ['coffee_id', 'name', 'img'];
   const specsList = Object.entries(CoffeeSpecs).filter(
     ([key]) => !keysToExclude.includes(key)
   );
