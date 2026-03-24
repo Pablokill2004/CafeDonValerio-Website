@@ -17,7 +17,7 @@ const Footer = () => {
     "Contactos": "#Footer",
   
   };
-  const numero = "50212345678"; // Cambia por tu número
+  const numero = "50247100170"; // Cambia por tu número
   const mensaje = "Hola, me gustaría más información."; // Mensaje opcional
 
 
