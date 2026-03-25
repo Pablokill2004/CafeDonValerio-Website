@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import FooterLogo from "../../public/logos/Footer_Logos/CDV_Footer_Logo.jpeg";
-import WhatsAppIcon from "../../public/logos/Footer_Logos/whatsapp.png";
-import FacebookIcon from "../../public/logos/Footer_Logos/facebook.png";
-import InstagramIcon from "../../public/logos/Footer_Logos/instagram.png";
+import FooterLogo from "/logos/Footer_Logos/CDV_Footer_Logo.jpeg";
+import WhatsAppIcon from "/logos/Footer_Logos/whatsapp.png";
+import FacebookIcon from "/logos/Footer_Logos/facebook.png";
+import InstagramIcon from "/logos/Footer_Logos/instagram.png";
 
 const Footer = () => {
 
@@ -32,7 +32,7 @@ return (
           <div className="flex items-center justify-center md:justify-start">
             <div className="relative w-48 md:w-64 aspect-[4/5]">
               <Image 
-                src={FooterLogo} 
+                src="/logos/Footer_Logos/CDV_Footer_Logo.jpeg"
                 alt="Brand logo" 
                 fill
                 sizes="(max-width: 640px) 192px, (max-width: 1024px) 256px, 320px"
@@ -74,7 +74,7 @@ return (
                       rel="noopener noreferrer"
                       className="hover:underline">+502 4555 5555</a>
                   <div className="relative w-5 h-5">
-                    <Image src={WhatsAppIcon} alt="WhatsApp" fill className="object-cover" />
+                    <Image src="/logos/Footer_Logos/whatsapp.png" alt="WhatsApp" fill className="object-cover" />
                   </div>
                 </div>
                 <span className="text-sm">Carlos Siquinajay</span>
@@ -98,12 +98,12 @@ return (
             <span className="text-sm md:text-lg">Síguenos</span>
             <a href="https://www.instagram.com/cafedonvalerio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram" className="transition-opacity hover:opacity-80">
               <div className="relative w-8 aspect-square md:w-10">
-                <Image src={InstagramIcon} alt="Instagram" fill className="object-contain" />
+                <Image src="/logos/Footer_Logos/instagram.png" alt="Instagram" fill className="object-contain" />
               </div>
             </a>
             <a href="https://www.facebook.com/share/1DhuHyKKeh/?mibextid=wwXIfr" title="Facebook" className="transition-opacity hover:opacity-80">
               <div className="relative w-8 aspect-square md:w-10">
-                <Image src={FacebookIcon} alt="Facebook" fill className="object-contain" />
+                <Image src="/logos/Footer_Logos/facebook.png" alt="Facebook" fill className="object-contain" />
               </div>
             </a>
           </div>

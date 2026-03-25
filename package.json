@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint"
   },
+  
   "dependencies": {
     "@base-ui/react": "^1.2.0",
     "@supabase/supabase-js": "^2.100.0",
@@ -38,5 +39,8 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
     "typescript": "^5"
+  },
+   "pnpm": {
+    "onlyBuiltDependencies": ["sharp", "esbuild"]
   }
 }
