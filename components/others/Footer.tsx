@@ -69,7 +69,7 @@ return (
                   <a  href={`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline">+502 4555 5555</a>
+                      className="hover:underline">+502 5339-8236</a>
                   <div className="relative w-5 h-5">
                     <Image src="/Logos/Footer_Logos/whatsapp.png" alt="WhatsApp" fill className="object-cover" />
                   </div>
