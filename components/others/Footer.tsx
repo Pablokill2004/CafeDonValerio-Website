@@ -29,7 +29,7 @@ return (
           <div className="flex items-center justify-center md:justify-start">
             <div className="relative w-48 md:w-64 aspect-[4/5]">
               <Image 
-                src="/logos/footer_Logos/CDV_Footer_Logo.jpeg"
+                src="/Logos/Footer_Logos/CDV_Footer_Logo.jpeg"
                 alt="Brand logo" 
                 fill
                 sizes="(max-width: 640px) 192px, (max-width: 1024px) 256px, 320px"
@@ -71,7 +71,7 @@ return (
                       rel="noopener noreferrer"
                       className="hover:underline">+502 4555 5555</a>
                   <div className="relative w-5 h-5">
-                    <Image src="/logos/footer_Logos/whatsapp.png" alt="WhatsApp" fill className="object-cover" />
+                    <Image src="/Logos/Footer_Logos/whatsapp.png" alt="WhatsApp" fill className="object-cover" />
                   </div>
                 </div>
                 <span className="text-sm">Carlos Siquinajay</span>
@@ -95,12 +95,12 @@ return (
             <span className="text-sm md:text-lg">Síguenos</span>
             <a href="https://www.instagram.com/cafedonvalerio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram" className="transition-opacity hover:opacity-80">
               <div className="relative w-8 aspect-square md:w-10">
-                <Image src="/logos/footer_Logos/instagram.png" alt="Instagram" fill className="object-contain" />
+                <Image src="/Logos/Footer_Logos/instagram.png" alt="Instagram" fill className="object-contain" />
               </div>
             </a>
             <a href="https://www.facebook.com/share/1DhuHyKKeh/?mibextid=wwXIfr" title="Facebook" className="transition-opacity hover:opacity-80">
               <div className="relative w-8 aspect-square md:w-10">
-                <Image src="/logos/Footer_Logos/facebook.png" alt="Facebook" fill className="object-contain" />
+                <Image src="/Logos/Footer_Logos/facebook.png" alt="Facebook" fill className="object-contain" />
               </div>
             </a>
           </div>

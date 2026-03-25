@@ -110,9 +110,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <img
-          src="/logos/CDV_Banner_Logo.png"
-          alt="Logo"
-          className="h-16 w-auto"
+          src="/Logos/CDV_Banner_Logo.png"
         />
 
         {/* Desktop Navigation - hidden on mobile, visible on md and up */}
