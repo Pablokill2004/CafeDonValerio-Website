@@ -110,7 +110,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <img
-          src="/Logos/CDV_Banner_Logo.png"
+          src="/logos/CDV_Banner_Logo.png"
           alt="Logo"
           className="h-16 w-auto"
         />
